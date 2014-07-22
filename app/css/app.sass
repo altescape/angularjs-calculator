@@ -1,0 +1,21 @@
+/* app sass stylesheet */
+
+@import "../bower_components/bootstrap-sass-twbs/assets/stylesheets/bootstrap"
+
+
+.menu
+    list-style: none
+    border-bottom: 0.1em solid black
+    margin-bottom: 2em
+    padding: 0 0 0.5em
+
+    li
+        display: inline
+
+        &:before
+            content: "|"
+            padding-right: 1em
+
+        &:nth-child(1):before
+            content: ""
+            padding: 0
