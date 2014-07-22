@@ -4,9 +4,9 @@
 
 angular.module('myApp.controllers', [])
 	.controller('MyCtrl1', ['$scope', 'fortyTwo', function ($scope, fortyTwo) {
+
 		$scope.number = fortyTwo.doSomething();
 		$scope.another_number = fortyTwo.doSomethingElse();
-		$scope.result_number = 0;
 		$scope.inputed_number = 0;
 
 		$scope.doSomethingAnotherThing = function (number) {
@@ -14,7 +14,7 @@ angular.module('myApp.controllers', [])
 		};
 
 		$scope.doSumOnNumber = function () {
-			return $scope.result_number = $scope.number + $scope.another_number + $scope.inputed_number;
+			return $scope.result_number = fortyTwo.doSum($scope.inputed_number, $scope.number, $scope.another_number);
 		};
 
 		$scope.doSumOnNumber();

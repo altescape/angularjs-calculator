@@ -15,6 +15,9 @@ angular.module('myApp.services', [])
 			},
 			doSomethingElse : function () {
 				return this.a_number = 2;
+			},
+			doSum : function (num1, num2, num3) {
+				return num1 + num2 * num3;
 			}
 		}
 	});
